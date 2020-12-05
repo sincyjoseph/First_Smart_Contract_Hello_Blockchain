@@ -2,7 +2,9 @@
 
 
 steps
-Open vscode
+
+Open vscode or any editor
+ 
 1.mkdir hello-blockchain
 
 2.ls
