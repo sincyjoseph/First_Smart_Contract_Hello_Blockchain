@@ -27,25 +27,24 @@ Open vscode or any editor
 
 10. Create Hello.sol file
 
+		// SPDX-License-Identifier: GPL-3.0
+		pragma solidity ^0.4.25;
 
-// SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.4.25;
+		contract Hello {
+		    string greeting;
 
-contract Hello {
-    string greeting;
+		    constructor() public {
+			greeting = "Hello Blockchain World";
+		    }
 
-    constructor() public {
-        greeting = "Hello Blockchain World";
-    }
+		    function getGreeting() public view returns(string memory) {
+			return greeting;
+		    }
 
-    function getGreeting() public view returns(string memory) {
-        return greeting;
-    }
-
-    function setGreeting(string _greeting) public {
-        greeting = _greeting;
-    }
-}
+		    function setGreeting(string _greeting) public {
+			greeting = _greeting;
+		    }
+		}
 
 11.type node
 
@@ -95,7 +94,6 @@ contract Hello {
 32.myContract.methods.setGreeting("Blockchain is awsome!!").send({from:accounts[0]});
 
 33.myContract.methods.getGreeting().call().then(console.log)
-
 
 
 
